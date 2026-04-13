@@ -1,0 +1,182 @@
+[
+  {
+    "id": "mata",
+    "tracked": true,
+    "world": "w1",
+    "region": "Bullface",
+    "map": "Bullface Forest",
+    "boss": "Mata",
+    "spawnTimes": "2:00 / 4:00 / 6:00 / 8:00 / 10:00 / 12:00"
+  },
+  {
+    "id": "boltox",
+    "tracked": true,
+    "world": "w1",
+    "region": "Bullface",
+    "map": "Demon Bull Temple 1F",
+    "boss": "Boltox",
+    "spawnTimes": "1:00 / 3:00 / 5:00 / 7:00 / 9:00 / 11:00"
+  },
+  {
+    "id": "bullface-fiend-king",
+    "tracked": true,
+    "world": "w1",
+    "region": "Bullface",
+    "map": "Bullface Fiend King's Sanctuary",
+    "boss": "Bullface Fiend King",
+    "spawnTimes": "3:00 / 6:00 / 9:00 / 12:00"
+  },
+  {
+    "id": "yeo-wihuang",
+    "tracked": true,
+    "world": "w1",
+    "region": "Whitemaur",
+    "map": "Whitemaur Sealing Circle",
+    "boss": "Yeo Wihuang",
+    "spawnTimes": "1:00 / 5:00 / 9:00"
+  },
+  {
+    "id": "taehyul",
+    "tracked": true,
+    "world": "w7",
+    "region": "Redmoon",
+    "map": "Redmoon Gorge 2F",
+    "boss": "Taehyul",
+    "spawnTimes": "1:00 / 3:00 / 5:00 / 7:00 / 9:00 / 11:00"
+  },
+  {
+    "id": "yiun",
+    "tracked": true,
+    "world": "w7",
+    "region": "Demonic Cult",
+    "map": "Demonic Cult Main Hall",
+    "boss": "Yiun",
+    "spawnTimes": "2:00 / 5:00 / 8:00 / 11:00"
+  },
+  {
+    "id": "nefariox-obdurate-zenith",
+    "tracked": true,
+    "world": "w7",
+    "region": "Phantasia",
+    "map": "Phantasia Desert",
+    "boss": "Nefariox Obdurate Zenith",
+    "spawnTimes": "2:00 / 4:00 / 6:00 / 8:00 / 10:00 / 12:00"
+  },
+  {
+    "id": "kuriliaca",
+    "tracked": true,
+    "world": "w4",
+    "region": "Overlord",
+    "map": "Overlord Sealing Circle",
+    "boss": "Kuriliaca",
+    "spawnTimes": "3:00 / 6:00 / 9:00 / 12:00"
+  },
+  {
+    "id": "juhui",
+    "tracked": true,
+    "world": "w2",
+    "region": "Redmoon",
+    "map": "Redmoon Mountain",
+    "boss": "Juhui",
+    "spawnTimes": "2:30 / 5:30 / 8:30 / 11:30"
+  },
+  {
+    "id": "faluk",
+    "tracked": true,
+    "world": "w5",
+    "region": "Sabuk",
+    "map": "Great Sabuk Wall Camp",
+    "boss": "Faluk",
+    "spawnTimes": "3:30 / 6:30 / 9:30 / 12:30"
+  },
+  {
+    "id": "tale-warper-fiend",
+    "tracked": true,
+    "world": "w5",
+    "region": "Illusion",
+    "map": "Illusion Temple",
+    "boss": "Tale Warper Fiend",
+    "spawnTimes": "1:30 / 4:30 / 7:30 / 10:30"
+  },
+  {
+    "id": "dusk-armado-emperor",
+    "tracked": true,
+    "world": "w3",
+    "region": "Viperbeast",
+    "map": "Viperbeast Plain",
+    "boss": "Dusk Armado Emperor",
+    "spawnTimes": "1:30 / 3:30 / 5:30 / 7:30 / 9:30 / 11:30"
+  },
+  {
+    "id": "tombbeast-gyo",
+    "tracked": true,
+    "world": "w3",
+    "region": "Nefariox",
+    "map": "Nefariox Necropolis",
+    "boss": "Tombbeast Gyo",
+    "spawnTimes": "2:30 / 8:30"
+  },
+  {
+    "id": "mara",
+    "tracked": false,
+    "world": "w3",
+    "region": "Rockcut",
+    "map": "Rockcut Tomb",
+    "boss": "Mara",
+    "spawnTimes": "2:30 / 5:30 / 8:30 / 11:30"
+  },
+  {
+    "id": "boodo",
+    "tracked": false,
+    "world": "w3",
+    "region": "Rockcut",
+    "map": "Rockcut Tomb",
+    "boss": "Boodo",
+    "spawnTimes": "3:30 / 9:30"
+  },
+  {
+    "id": "cheol-mokgang",
+    "tracked": true,
+    "world": "w6",
+    "region": "Bicheon",
+    "map": "Bicheon Town",
+    "boss": "Cheol Mokgang",
+    "spawnTimes": "2:30 / 4:30 / 6:30 / 8:30 / 10:30 / 12:30"
+  },
+  {
+    "id": "bicheon-sura",
+    "tracked": false,
+    "world": "w6",
+    "region": "Bicheon",
+    "map": "Bicheon Town",
+    "boss": "Bicheon Sura",
+    "spawnTimes": "4:30 / 10:30"
+  },
+  {
+    "id": "hong-yeo",
+    "tracked": true,
+    "world": "w6",
+    "region": "Demoniac",
+    "map": "Demoniac Mine",
+    "boss": "Hong Yeo",
+    "spawnTimes": "1:30 / 3:30 / 5:30 / 7:30 / 9:30 / 11:30"
+  },
+  {
+    "id": "wuihan",
+    "tracked": false,
+    "world": "w6",
+    "region": "Phantom",
+    "map": "Phantom Woods",
+    "boss": "Wuihan",
+    "spawnTimes": "5:30 / 11:30"
+  },
+  {
+    "id": "obscene-yeticops",
+    "tracked": false,
+    "world": "w6",
+    "region": "Bicheon",
+    "map": "Bicheon Labyrinth",
+    "boss": "Obscene Yeticops",
+    "spawnTimes": "6:30 / 12:30"
+  }
+]

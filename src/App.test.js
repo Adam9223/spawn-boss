@@ -1,8 +1,20 @@
-import { render, screen } from '@testing-library/react';
+import React, { act } from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders boss timer title', () => {
+  global.IS_REACT_ACT_ENVIRONMENT = true;
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  const root = createRoot(container);
+
+  act(() => {
+    root.render(<App />);
+  });
+
+  expect(container.textContent).toMatch(/MIR4 Boss Timer/i);
+  act(() => {
+    root.unmount();
+  });
+  document.body.removeChild(container);
 });

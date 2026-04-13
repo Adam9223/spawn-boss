@@ -21,3 +21,23 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+node_modules
+package.json
+.env
+.env.example
+@package.json
+@package-lock.json
+.env.local
+frontend/
+.gitignore
+node_modules copy
+.env copy
+.env.local copy
+frontend/ copy
+package.json copy
+package-lock.json copy
+.gitignore copy
+
+
