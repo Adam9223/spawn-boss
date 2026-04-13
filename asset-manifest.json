@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/spawn-boss/static/css/main.c0c67c81.css",
-    "main.js": "/spawn-boss/static/js/main.ecb4ce7e.js",
+    "main.js": "/spawn-boss/static/js/main.6254c308.js",
     "static/js/453.fd711e92.chunk.js": "/spawn-boss/static/js/453.fd711e92.chunk.js",
     "static/media/Screenshot 2026-04-13 104554.png": "/spawn-boss/static/media/Screenshot 2026-04-13 104554.9cc8b1c5cd9b95e774bc.png",
     "static/media/Screenshot 2026-04-13 104542.png": "/spawn-boss/static/media/Screenshot 2026-04-13 104542.7f6581bc82dfaf9ac37a.png",
@@ -11,11 +11,11 @@
     "static/media/Screenshot 2026-04-13 104611.png": "/spawn-boss/static/media/Screenshot 2026-04-13 104611.b6d6b7eceb3fe71075d7.png",
     "index.html": "/spawn-boss/index.html",
     "main.c0c67c81.css.map": "/spawn-boss/static/css/main.c0c67c81.css.map",
-    "main.ecb4ce7e.js.map": "/spawn-boss/static/js/main.ecb4ce7e.js.map",
+    "main.6254c308.js.map": "/spawn-boss/static/js/main.6254c308.js.map",
     "453.fd711e92.chunk.js.map": "/spawn-boss/static/js/453.fd711e92.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0c67c81.css",
-    "static/js/main.ecb4ce7e.js"
+    "static/js/main.6254c308.js"
   ]
 }
