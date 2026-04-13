@@ -17,9 +17,9 @@ function dateFromCycleMinutes(baseDate, minutesUntil) {
   return new Date(baseDate.getTime() + minutesUntil * 60000);
 }
 
-export function getAsiaDate(now, offsetHours) {
+export function getServerTimeDate(now, timeZone, offsetHours) {
   const parts = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'Asia/Manila',
+    timeZone,
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
@@ -30,6 +30,10 @@ export function getAsiaDate(now, offsetHours) {
   const base = new Date(now);
   base.setHours(Number(values.hour) + Number(offsetHours || 0), Number(values.minute), Number(values.second), 0);
   return base;
+}
+
+export function getAsiaDate(now, offsetHours) {
+  return getServerTimeDate(now, 'Asia/Manila', offsetHours);
 }
 
 export function formatClock(date) {

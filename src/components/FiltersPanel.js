@@ -8,7 +8,11 @@ function SelectFilter({ classes, id, label, value, options, onChange }) {
     <>
       <label className={classes.nativeLabel} htmlFor={id}>{label}</label>
       <select className={classes.nativeSelect} id={id} value={value} onChange={(event) => onChange(event.target.value)}>
-        {options.map((item) => <option key={item} value={item}>{item}</option>)}
+        {options.map((item) => {
+          const optionValue = typeof item === 'string' ? item : item.id;
+          const optionLabel = typeof item === 'string' ? item : item.label;
+          return <option key={optionValue} value={optionValue}>{optionLabel}</option>;
+        })}
       </select>
     </>
   );
@@ -36,14 +40,17 @@ function FiltersPanel({
   classes,
   regions,
   worlds,
+  serverRegions,
   region,
   world,
+  serverRegionId,
   windowMinutes,
   offsetHours,
   manualTime,
   trackedOnly,
   onRegionChange,
   onWorldChange,
+  onServerRegionChange,
   onWindowMinutesChange,
   onOffsetHoursChange,
   onManualTimeChange,
@@ -52,19 +59,29 @@ function FiltersPanel({
   return (
     <Box mt={3} component={Paper} className={classes.panel}>
       <Grid container spacing={2} alignItems="center" className={classes.controls}>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} sm={6} md={2}>
+          <SelectFilter
+            classes={classes}
+            id="server-region-filter"
+            label="Server time"
+            value={serverRegionId}
+            options={serverRegions}
+            onChange={onServerRegionChange}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={2}>
           <SelectFilter classes={classes} id="region-filter" label="Region" value={region} options={regions} onChange={onRegionChange} />
         </Grid>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <SelectFilter classes={classes} id="world-filter" label="World" value={world} options={worlds} onChange={onWorldChange} />
         </Grid>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <NumberInput classes={classes} id="window-minutes" label="Window" value={windowMinutes} suffix="min" onChange={onWindowMinutesChange} />
         </Grid>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <NumberInput classes={classes} id="offset-hours" label="Offset" value={offsetHours} suffix="hr" onChange={onOffsetHoursChange} />
         </Grid>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <label className={classes.nativeLabel} htmlFor="manual-time">Manual time</label>
           <input
             className={classes.nativeInput}
@@ -74,7 +91,7 @@ function FiltersPanel({
             value={manualTime}
           />
         </Grid>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <Box display="flex" alignItems="center" justifyContent="space-between">
             <Typography variant="body2">Tracked only</Typography>
             <input

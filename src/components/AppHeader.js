@@ -2,9 +2,11 @@ import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 import { formatServerClock } from '../utils/time';
 
-function AppHeader({ classes, serverDate }) {
+function AppHeader({ classes, serverDate, serverRegion }) {
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
@@ -17,7 +19,11 @@ function AppHeader({ classes, serverDate }) {
             <Typography variant="body2" className={classes.muted}>Asia server spawn tracker</Typography>
           </Box>
         </Box>
-        <span className={classes.pill}>{`Server ${formatServerClock(serverDate)}`}</span>
+        <Box className={classes.headerActions}>
+          <Link className={classes.navLink} to="/">Home</Link>
+          <Navbar classes={classes} />
+          {serverDate ? <span className={classes.pill}>{`${serverRegion?.label || 'Server'} ${formatServerClock(serverDate)}`}</span> : null}
+        </Box>
       </Toolbar>
     </AppBar>
   );
