@@ -77,7 +77,7 @@ function WeeklyMaterialsPage() {
               <button className={classes.imageViewerClose} onClick={() => setSelectedImage(null)} type="button">Close</button>
             </Box>
             <img className={classes.imageViewerImage} src={selectedImage.src} alt={`${selectedImage.title} weekly materials large preview`} />
-            <Typography variant="body2" className={classes.imageViewerCredit}>Credits: Blue phrase</Typography>
+            <Typography variant="body2" className={classes.imageViewerCredit}>Credits: Madam Blue for the Images</Typography>
           </Box>
         </Box>
       ) : null}

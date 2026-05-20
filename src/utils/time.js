@@ -6,7 +6,7 @@ function parseSpawnTimes(value) {
     const hour = Number(hourPart) % 12;
     const minute = Number(minutePart);
     return hour * 60 + minute;
-  });
+  }).filter(Number.isFinite);
 }
 
 function minutesFromDate(date) {
@@ -37,6 +37,10 @@ export function getAsiaDate(now, offsetHours) {
 }
 
 export function formatClock(date) {
+  if (!date) {
+    return '-';
+  }
+
   return new Intl.DateTimeFormat('en-US', {
     hour: 'numeric',
     minute: '2-digit',
@@ -54,6 +58,10 @@ export function formatServerClock(date) {
 }
 
 export function formatCountdown(totalMinutes) {
+  if (!Number.isFinite(totalMinutes)) {
+    return '-';
+  }
+
   const totalSeconds = Math.max(0, Math.round(totalMinutes * 60));
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -69,6 +77,15 @@ export function formatCountdown(totalMinutes) {
 export function getNextSpawn(boss, serverDate) {
   const currentCycleMinute = minutesFromDate(serverDate);
   const spawnMinutes = parseSpawnTimes(boss.spawnTimes);
+  if (spawnMinutes.length === 0) {
+    return {
+      ...boss,
+      nextSpawn: null,
+      minutesUntil: Number.POSITIVE_INFINITY,
+      spawningNow: false,
+    };
+  }
+
   const ranked = spawnMinutes
     .map((spawnMinute) => ({
       cycleMinute: spawnMinute,
